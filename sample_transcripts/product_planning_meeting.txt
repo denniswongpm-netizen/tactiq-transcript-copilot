@@ -1,0 +1,19 @@
+[Fictional example transcript for demo purposes -- "Loopwise" is not a real company.]
+
+[00:00] Priya: Okay, let's get started. Today's agenda is the notifications overhaul for Q4.
+[00:12] Priya: First up -- support tickets. Marcus, what are you seeing?
+[00:18] Marcus: Customers are asking for a digest mode. Right now every comment fires an individual email and people are muting the whole feature.
+[00:34] Priya: Right, we've seen that in the churn interviews too.
+[00:41] Sofia: It would be great if we could let users pick daily vs. real-time per project, not just globally.
+[00:55] Marcus: Agreed. I'll pull the exact ticket volume by tomorrow so we have real numbers behind this.
+[01:10] Priya: Good. Let's go with per-project frequency settings as the direction, then -- that's the decision for this week.
+[01:22] Sofia: On the design side, can we add a preview of what the digest actually looks like before someone turns it on? People are confused about what they're opting into.
+[01:40] Priya: Yes -- add that to scope. Sofia, can you have a rough mock by Thursday?
+[01:48] Sofia: I'll have something by Thursday.
+[02:05] Marcus: One more thing -- support keeps getting asked whether Slack notifications can respect the same per-project setting, or if that's a separate system.
+[02:20] Priya: Good question, let's not decide that today -- flagging it as open, we need engineering input before committing either way.
+[02:35] Priya: Also, quick note: the mobile app crash on the notifications tab from last sprint -- is that still open?
+[02:42] Marcus: Yeah, I'll check with the mobile team and report back.
+[02:50] Priya: Thanks. Last item -- Sofia, can you also loop in support to review the digest preview copy before it ships?
+[03:02] Sofia: Will do, I'll set that up.
+[03:10] Priya: Great, that's everything for today. Thanks all.
