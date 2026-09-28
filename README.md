@@ -1,10 +1,10 @@
 # transcript-copilot
 
-A small, working demo built after applying for Tactiq's Principal Product Manager role, to show
-one concrete idea for how "meeting notes for PMs" could go one step further: turning a transcript
-directly into a structured, **traceable** PRD draft — decisions, requirements, action items, and
-explicitly-open questions — where every single bullet cites the exact line it came from, and a
-separate check verifies that citation is real before the draft is trusted.
+A small, working demo of one concrete idea for how "meeting notes for PMs" could go one step
+further: turning a transcript directly into a structured, **traceable** PRD draft — decisions,
+requirements, action items, and explicitly-open questions — where every single bullet cites the
+exact line it came from, and a separate check verifies that citation is real before the draft is
+trusted.
 
 ## Run it
 
@@ -16,9 +16,9 @@ python3 -m transcript_copilot.pipeline sample_transcripts/product_planning_meeti
 
 That prints a generated PRD draft to stdout, then reports whether every bullet in it passed the
 traceability check. The sample transcript is fictional ("Loopwise" is not a real company) —
-written to plausibly resemble a real Tactiq export, with a mix of decisions, feature requests,
-commitments, and one deliberately *undecided* item, to show the extractor doesn't just treat
-every sentence as equally settled.
+written to plausibly resemble a real meeting-transcription export, with a mix of decisions,
+feature requests, commitments, and one deliberately *undecided* item, to show the extractor
+doesn't just treat every sentence as equally settled.
 
 Run the test suite:
 
@@ -33,12 +33,12 @@ fabricated claim rather than rubber-stamping everything.
 
 ## Why this shape, specifically
 
-The idea I wanted to show isn't "AI can summarize a meeting" — that's the table-stakes part of
-what Tactiq already does well. It's this: **a generated artifact should never claim something the
+The idea I wanted to show isn't "AI can summarize a meeting" — that's table stakes for any
+meeting-notes product already. It's this: **a generated artifact should never claim something the
 source material didn't actually say, and that should be a mechanically checked property of the
-system, not just a hope about how carefully the model was prompted.** For a product whose entire
-value proposition is being a trustworthy record of what actually happened in a meeting, I think
-that property is worth making structurally impossible to violate, not just something a good prompt
+system, not just a hope about how carefully the model was prompted.** For any product whose value
+proposition is being a trustworthy record of what actually happened in a meeting, I think that
+property is worth making structurally impossible to violate, not just something a good prompt
 tries to encourage.
 
 Concretely, that means:
@@ -64,7 +64,7 @@ check kept independent of the generation step so it can't be fooled by confident
 is the same one I used building an AI-orchestrated platform end-to-end (strategy, architecture, and
 execution), where every generated artifact goes through comparable code-level checks before a
 human ever reviews it, backed by 2,000+ automated tests. This repo is a small, self-contained
-adaptation of that same discipline to Tactiq's own domain, not a from-scratch idea.
+adaptation of that same discipline to a meeting-transcript domain, not a from-scratch idea.
 
 ## What I'd build next if this were real
 
@@ -73,7 +73,7 @@ adaptation of that same discipline to Tactiq's own domain, not a from-scratch id
   whether its citation is genuine.
 - Handle multi-line context (a decision that spans several back-and-forth lines, not just one).
 - Feed the "Open Questions" section into an actual follow-up mechanism (a Slack nudge, a Linear
-  ticket) — the same category of workflow Tactiq's existing integrations already point at.
+  ticket) — the same category of workflow most meeting-notes tools already integrate with.
 
 — Dennis Wong
 [linkedin.com/in/denniswongpm](https://linkedin.com/in/denniswongpm)
